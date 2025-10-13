@@ -1,0 +1,32 @@
+.contato{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(206, 229, 255, 0.8);
+    margin-left: 20vw;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+    width: 60vw;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.contato:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2{
+    color: rgb(4, 1, 15);
+    font-weight: bold;
+}
+h3{
+    color: rgb(24, 79, 128);
+}
+
+p{
+    font-size: 20px;
+}
