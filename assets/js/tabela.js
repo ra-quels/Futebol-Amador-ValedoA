@@ -1,11 +1,49 @@
 $(document).ready(function() {
+    $.extend( $.fn.dataTable.ext.type.order, {
+        "custom-text-pre": function ( data ) {
+            
+            let rawData = String(data).replace( /(<([^>]+)>)/ig, '' ); 
+            
+            if (rawData === null || rawData === undefined || rawData.trim() === '') {
+                return 'zzzzzzzzzzzzzz'; 
+            }
+            
+            let cleaned = rawData
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "") 
+                .toLowerCase()
+                
+                .replace(/^["'.,\s]+/, '')
+                .replace(/^(\d+)/, 'z$1'); 
+
+            return cleaned;
+        }
+    });
+
     $('#tabela_fichamento').DataTable({
         language: {
             url: "https://cdn.datatables.net/plug-ins/2.0.0/i18n/pt-BR.json"
         },
-        scrollY: "400px", // Altura da área de rolagem
+          stateSave: true,
+        scrollY: "400px", 
         scrollCollapse: true,
-        paging: false // Desabilita a paginação  
+        paging: false, 
+        
+        "columnDefs": [
+            {
+                "orderable": false,
+                "targets": 0
+            },
+           
+            {
+                "type": "num", 
+                "targets": 3
+            },
+
+            {
+                "type": "custom-text", 
+                "targets": [1, 2, 4, 5, 6, 7, 8, 9, 10]
+            }
+        ]
     });
 });
 

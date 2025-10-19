@@ -65,16 +65,23 @@
                             <?php
                                 if($registros){
                                     foreach($registros as $registro){
-                                        $data_brasil = date("d/m/Y", strtotime($registro['fonte_data']));
-
+                                        $data_iso_sort = str_replace('-', '', $registro['fonte_data']);
                                         echo "<tr>";
                                         echo "<td class='p-2'>";       
                                         echo "<a href='fichamento_view.php?fichamento_id={$registro['fichamento_id']}' type='button' class='btn btn-outline-info btn-sm'><i class='bi bi-eye-fill'></i></a>";      
                                         echo "</td>";
                                          echo "<td><div class='titulo centralizar' title='{$registro['titulo']}'>{$registro['titulo']}</div></td>";      
                                          echo "<td><div class='assunto centralizar' title='{$registro['assunto']}'>{$registro['assunto']}</div></td>";
-                                         echo "<td><div class='centralizar'></div>$data_brasil</td>";      
-                                         echo "<td><div class='centralizar'>{$registro['categoria_1']}</div></td>";     
+                                        if ($registro['fonte_data'] === '0000-00-00' || empty($registro['fonte_data'])) {
+                                            $data_brasil = 's.d.';
+                                            
+                                            $data_iso_sort = '99999999'; 
+                                            
+                                        } else {
+                                            
+                                            $data_brasil = date("d/m/Y", strtotime($registro['fonte_data']));
+                                            $data_iso_sort = str_replace('-', '', $registro['fonte_data']); 
+                                        }echo "<td><div class='centralizar'>{$registro['categoria_1']}</div></td>";     
                                          echo "<td><div class='centralizar'>{$registro['categoria_sub']}</div></td>";       
                                          echo "<td><div class='centralizar'>{$registro['categoria_2']}</div></td>";      
                                          echo "<td><div class='centralizar'>{$registro['categoria_sub_2']}</div></td>";      
