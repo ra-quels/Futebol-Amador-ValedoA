@@ -67,6 +67,7 @@
                                     foreach($registros as $registro){
                                         $data_iso_sort = str_replace('-', '', $registro['fonte_data']);
                                         echo "<tr>";
+										$data_brasil = date("d/m/Y", strtotime($registro['fonte_data']));
                                         echo "<td class='p-2'>";       
                                         echo "<a href='fichamento_view.php?fichamento_id={$registro['fichamento_id']}' type='button' class='btn btn-outline-info btn-sm'><i class='bi bi-eye-fill'></i></a>";      
                                         echo "</td>";
@@ -81,7 +82,9 @@
                                             
                                             $data_brasil = date("d/m/Y", strtotime($registro['fonte_data']));
                                             $data_iso_sort = str_replace('-', '', $registro['fonte_data']); 
-                                        }echo "<td><div class='centralizar'>{$registro['categoria_1']}</div></td>";     
+                                        }
+ 										echo "<td data-order='{$data_iso_sort}'><div class='centralizar'>$data_brasil</div></td>";      
+										echo "<td><div class='centralizar'>{$registro['categoria_1']}</div></td>";     
                                          echo "<td><div class='centralizar'>{$registro['categoria_sub']}</div></td>";       
                                          echo "<td><div class='centralizar'>{$registro['categoria_2']}</div></td>";      
                                          echo "<td><div class='centralizar'>{$registro['categoria_sub_2']}</div></td>";      
@@ -112,4 +115,5 @@
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <script src="assets/js/tabela.js"></script>
 </body>
+
 </html>
