@@ -4,14 +4,16 @@
     function criar_conexao(){        
         $conexao = null;
         try{	        
-            //Local
-            $conexao = new PDO('mysql:host=localhost; dbname=pibic', 'root', '');
+        $host = getenv('DB_HOST');
+        $dbname = getenv('DB_NAME');
+        $user = getenv('DB_USER');
+        $pass = getenv('DB_PASS');
+        $port = getenv('DB_PORT');
 
-            //Nuvem
-            //$conexao = new PDO('mysql:host=localhost; dbname=id19566972_academia', 'id19566972_usuario', '~vpo&^[@X0?Kj&8k');            
-
-            $conexao->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-            $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8";
+        $conexao = new PDO($dsn, $user, $pass);
+        $conexao->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
             return $conexao;    
 
