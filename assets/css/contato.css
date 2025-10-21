@@ -5,18 +5,42 @@
     margin-left: 20vw;
     margin-top: 8vh;
     margin-bottom: 8vh;
-    padding: 20px 15px;
+    padding: 40px;
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
-    width: 60vw;
+    width: 70vw;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-
-
+    border-radius: 12px;
+    gap: 2rem;
+    max-width: 1200px;
 }
 
 .contato:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contato > div {
+            width: 50%;
+}
+
+.map-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%; 
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+        
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 h2{
@@ -29,4 +53,25 @@ h3{
 
 p{
     font-size: 20px;
+    line-height: 1.6;
 }
+
+
+ @media (max-width: 768px) {
+            .contato {
+                flex-direction: column; 
+                width: 90vw; 
+                margin: 5vh auto; 
+                margin-left: auto; 
+                padding: 20px;
+            }
+
+            .contato > div {
+                width: 100%;
+            }
+
+            .map-container {
+                padding-bottom: 100%; 
+            }
+}
+
