@@ -26,7 +26,6 @@ dl, ol, ul {
 
 
 nav {
-    height: 8vh;
     position: fixed;
     width: 100%;
     background: rgba(7, 11, 27);
@@ -245,6 +244,11 @@ footer p {
     font-weight: 600;
 }
 
+@media (max-width:970px){
+    .apresentacao-col{
+        margin: 10px;
+    }
+}
 @media (max-width: 768px) {
     .nav-links ul {
         display: flex;
@@ -254,4 +258,17 @@ footer p {
     .text-box h1 {
         font-size: 36px;
     }
+
+    .text-box {
+        width: 95%;
+        top: 75%;
+    }
+
 }
+
+@media(max-width: 634px){
+    .expand-all-btn{
+        width: 36vw;
+    }
+}
+
