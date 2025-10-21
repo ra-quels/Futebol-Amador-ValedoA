@@ -1,6 +1,6 @@
 <section class="header">
         <nav>
-            <a class="logo" href="index.php">LOGO</a>
+           <!-- <a class="logo" href="index.php">LOGO</a> -->
             <div class="nav-links" id="nav_links">
                <!-- <i class="bi bi-x-lg" onclick="hide_menu()"></i> -->
                 <ul>
