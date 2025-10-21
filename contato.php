@@ -31,10 +31,13 @@
         </p>
     </div>
    
-    <div class= "map-container>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.0646014730014!2d-42.65266192435593!3d-19.538839881763465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa55121d320a58b%3A0xd4d967e36cf66832!2sCentro%20Federal%20de%20Educa%C3%A7%C3%A3o%20Tecnol%C3%B3gica%20de%20Minas%20Gerais%20-%20Campus%20Tim%C3%B3teo!5e0!3m2!1spt-BR!2sbr!4v1740631894663!5m2!1spt-BR!2sbr"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    <div>
+       <div class= "map-container>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.0646014730014!2d-42.65266192435593!3d-19.538839881763465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa55121d320a58b%3A0xd4d967e36cf66832!2sCentro%20Federal%20de%20Educa%C3%A7%C3%A3o%20Tecnol%C3%B3gica%20de%20Minas%20Gerais%20-%20Campus%20Tim%C3%B3teo!5e0!3m2!1spt-BR!2sbr!4v1740631894663!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> 
+   </div>
+       
+   
 
 </section>
 
