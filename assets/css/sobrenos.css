@@ -19,6 +19,23 @@
     margin: 1rem;
 }
 
+li {
+    word-break: break-word;
+}
+
+.card-list .card-link .card-title ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 20px; 
+    list-style: disc; 
+}
+
+.card-list .card-link .card-title ul li {
+    margin-bottom: 0.25rem; 
+    font-size: 0.95rem; 
+    line-height: 1.3;
+}
+
 
 ul {
     list-style: none;
@@ -94,11 +111,6 @@ ul {
     height: 60vh;
 }
 
-
-li{
-    margin-bottom: 1rem;
-}
-
 .card-list .card-link .badge{
     color: #5372F0;
     padding: 8px 16px;
@@ -146,12 +158,39 @@ li{
 
 
 @media screen and (max-width: 768px) {
-    .card-wrapper{
-        margin: 0 10px 25px;
+    .card-wrapper, .card {
+                max-width: 95vw;
+                margin: 0 auto 25px; 
+                padding: 10px 0;
     }
-
+    .docentes .card-list {
+                flex-direction: column; 
+                gap: 20px;
+    }
+    .docentes .card-list .card-item .card-link,
+    .discentes .card-list .card-item .card-link {
+            height: auto; 
+            min-height: auto;
+            display: flex; 
+            flex-direction: column;
+    }
+    .discentes .card-list .card-link .card-title ul li {
+            font-size: 0.85rem; 
+            margin-bottom: 0.1rem; 
+    }
+    .docentes .card-list .card-item {
+            width: 100%;
+            max-width: 100%; 
+    }
+    .docentes .card-list .card-link .card-image,
+    .discentes .card-list .card-link .card-image {
+            height: auto; 
+            max-height: 200px; 
+    }
     .card-wrapper .swiper-slide-button{
-        display: none;
+            display: none;
     }
+   
 }
+
 
