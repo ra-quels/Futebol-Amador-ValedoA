@@ -37,20 +37,20 @@ $extensao = strtolower(pathinfo($imagem_path, PATHINFO_EXTENSION));
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <style>
 .custom-modal .modal-dialog {
-    max-width: 90%; /* Aumentado um pouco o tamanho */
+    max-width: 90%; 
 }
 .data-label {
-    font-weight: 600; /* Mais espesso */
-    color: #495057; /* Cor de texto padrão, ligeiramente escuro */
+    font-weight: 600; 
+    color: #495057; 
     margin-bottom: 0.2rem;
     display: block;
 }
 .data-value {
-    background-color: #f8f9fa; /* Fundo leve para o valor */
+    background-color: #f8f9fa; 
     padding: 0.5rem;
     border-radius: 0.3rem;
     margin-bottom: 0.8rem;
-    word-wrap: break-word; /* Garante que textos longos quebrem */
+    word-wrap: break-word; 
 }
 .badge-tag {
     margin-right: 0.5rem;
